@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>True Care Solutions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html"><img src="assets/images/logo.png" alt="True Care Solutions Logo" class="logo" /></a>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="gallery.html">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="background-image: url('assets/images/banner.jpg');">
+    <div class="container hero-text" data-aos="fade-up">
+      <h1>Your Property, Our Priority</h1>
+      <p>Complete Home & Property Maintenance Solutions</p>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2 data-aos="fade-up">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/images/electrical.jpg" alt="Electrical" />
+          <h3>Electrical</h3>
+          <p>Installations, rewiring, circuit repair, safety inspections, etc.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/images/plumbing.jpg" alt="Plumbing" />
+          <h3>Plumbing</h3>
+          <p>Leak repairs, pipe installation, drainage, and maintenance.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="assets/images/hvac.jpg" alt="HVAC" />
+          <h3>HVAC / AC</h3>
+          <p>AC repair, duct cleaning, filter replacement, and servicing.</p>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+          <img src="assets/images/cleaning.jpg" alt="Cleaning" />
+          <h3>Cleaning</h3>
+          <p>Residential & commercial deep cleaning services with eco-friendly supplies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section light">
+    <div class="container">
+      <h2 data-aos="fade-right">How It Works</h2>
+      <ol data-aos="fade-left">
+        <li>Request a Quote</li>
+        <li>Get Matched With a Pro</li>
+        <li>Service Completed & Guaranteed</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Who We Are</h2>
+      <p>
+        True Care Solutions is a professional property services company offering high-quality,
+        affordable maintenance services for homes and businesses. Our trained, insured team
+        is passionate about delivering dependable solutions and ensuring customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section light">
+    <div class="container" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>Email: service@truecaresolutions.in</p>
+      <p>Phone: +91 0000000000</p>
+
+      <form id="contactForm" action="https://formspree.io/f/moqzbqya" method="POST" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formResponse" class="form-response"></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 True Care Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/0000000000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    AOS.init();
+
+    // Contact form submission handling
+    const form = document.getElementById('contactForm');
+    const formResponse = document.getElementById('formResponse');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          formResponse.textContent = 'Thank you! Your message has been sent.';
+          form.reset();
+        } else {
+          formResponse.textContent = 'Oops! There was a problem submitting your form.';
+        }
+      }).catch(() => {
+        formResponse.textContent = 'Oops! There was a problem submitting your form.';
+      });
+    });
+  </script>
+</body>
+</html>
