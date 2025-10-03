@@ -10,7 +10,10 @@
 <body>
   <header>
     <div class="container header-inner">
-      <a href="index.html"><img src="assets/images/logo.jpg" alt="True care solutions LLC Logo" class="logo" /></a>
+      <!-- Logo: Make sure assets/images/logo.jpg exists and is named correctly -->
+      <a href="index.html">
+        <img src="assets/images/logo.jpg" alt="True care solutions LLC Logo" class="logo" />
+      </a>
       <nav>
         <ul>
           <li><a href="#services">Services</a></li>
@@ -24,83 +27,75 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero" style="background-image: url('assets/images/banner.jpg');">
     <div class="container hero-text" data-aos="fade-up">
       <h1>Your Property, Our Priority</h1>
       <p>Complete Home & Property Maintenance Solutions</p>
     </div>
-  </section>  <!-- Close hero section here -->
+  </section>
 
+  <!-- Services Section -->
   <section id="services" class="section">
     <div class="container">
       <h2 data-aos="fade-up">Our Services</h2>
       <div class="services-grid">
+        <!-- Repeat for all services. Ensure images exist. -->
         <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
           <img src="assets/images/handyman.jpg" alt="Handyman" />
           <h3>Handymen</h3>
           <p>General repairs, furniture assembly, odd jobs, and home fixes.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/images/electrical.jpg" alt="Electrical" />
           <h3>Electrical</h3>
           <p>Installations, rewiring, circuit repair, and safety inspections.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
           <img src="assets/images/plumbing.jpg" alt="Plumbing" />
           <h3>Plumbing</h3>
           <p>Leak repairs, installations, drainage, and maintenance.</p>
         </div>
-
-          <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+        <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
           <img src="assets/images/lawn.jpg" alt="Lawn Care" />
           <h3>Lawn Care</h3>
           <p>Mowing, trimming, weeding, and garden cleanup services.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="700">
           <img src="assets/images/painting.jpg" alt="Painting" />
           <h3>Painting</h3>
           <p>Interior and exterior painting with quality finishes.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="800">
           <img src="assets/images/windows.jpg" alt="Windows" />
           <h3>Windows</h3>
           <p>Window repair, replacement, and sealing services.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="900">
           <img src="assets/images/appliances.jpg" alt="Appliances" />
           <h3>Appliances</h3>
           <p>Installation and repair of all major home appliances.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="1000">
           <img src="assets/images/remodeling.jpg" alt="Remodeling" />
           <h3>Remodeling</h3>
           <p>Kitchen, bathroom, and full-home remodeling services.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
           <img src="assets/images/flooring.jpg" alt="Flooring" />
           <h3>Flooring</h3>
           <p>Wood, tile, laminate installation and refinishing.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
           <img src="assets/images/hvac.jpg" alt="HVAC" />
           <h3>HVAC</h3>
           <p>AC servicing, duct cleaning, and filter replacement.</p>
         </div>
-        
         <div class="service-card" data-aos="zoom-in" data-aos-delay="1100">
           <img src="assets/images/roofing.jpg" alt="Roofing" />
           <h3>Roofing</h3>
           <p>Roof inspection, maintenance, and installation.</p>
         </div>
-
         <div class="service-card" data-aos="zoom-in" data-aos-delay="1200">
           <img src="assets/images/doors.jpg" alt="Doors" />
           <h3>Doors</h3>
@@ -110,6 +105,7 @@
     </div>
   </section>
 
+  <!-- How It Works Section -->
   <section id="how-it-works" class="section light">
     <div class="container">
       <h2 data-aos="fade-right">How It Works</h2>
@@ -121,6 +117,7 @@
     </div>
   </section>
 
+  <!-- About Section -->
   <section id="about" class="section">
     <div class="container" data-aos="fade-up">
       <h2>Who We Are</h2>
@@ -132,28 +129,26 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section light">
     <div class="container" data-aos="fade-up">
       <h2>Contact Us</h2>
       <p>Email: service@truecaresolutions.in</p>
       <p>Phone: +1 000-000-0000</p>
-
       <form id="contactForm" action="https://formspree.io/f/moqzbqya" method="POST" class="contact-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
-
         <label for="email">Email:</label>
         <input type="email" id="email" name="_replyto" required />
-
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
-
         <button type="submit">Send Message</button>
       </form>
       <p id="formResponse" class="form-response"></p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 True care solutions LLC. All rights reserved.</p>
@@ -165,6 +160,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
   <script>
