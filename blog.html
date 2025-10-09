@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog - True care solutions LLC</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/aos.css" />
 </head>
 <body>
   <header>
@@ -15,7 +15,7 @@
         <ul>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#how-it-works">How It Works</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
           <li><a href="gallery.html">Projects</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
@@ -24,21 +24,34 @@
     </div>
   </header>
 
+  <section class="hero light" style="background: #f8f9fa;">
+    <div class="container hero-text" data-aos="fade-up">
+      <h1>True Insights Blog</h1>
+      <p>Home improvement, maintenance, and property care tips from the experts at True Care Solutions LLC.</p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
-      <h1 data-aos="fade-up">Latest Blog Posts</h1>
+      <h2 data-aos="fade-up">Latest Posts</h2>
       <div class="blog-list">
         <article class="blog-post" data-aos="fade-up" data-aos-delay="100">
-          <h2>Top 5 AC Maintenance Tips</h2>
-          <p>Keep your AC running efficiently with these simple tips...</p>
+          <h3>Top 5 AC Maintenance Tips</h3>
+          <p>Keep your air conditioning system running smoothly all summer long with these five simple maintenance steps from our HVAC experts.</p>
           <a href="#">Read More</a>
         </article>
+
         <article class="blog-post" data-aos="fade-up" data-aos-delay="200">
-          <h2>How to Spot Electrical Problems Early</h2>
-          <p>Identifying electrical issues before they become serious...</p>
+          <h3>Spotting Electrical Issues Early</h3>
+          <p>Learn how to identify the warning signs of electrical problems in your home before they become costly or dangerous.</p>
           <a href="#">Read More</a>
         </article>
-        <!-- Add more posts here -->
+
+        <article class="blog-post" data-aos="fade-up" data-aos-delay="300">
+          <h3>When to Call a Handyman vs. a Specialist</h3>
+          <p>Unsure whether to hire a general handyman or a licensed technician? Here’s how to decide based on your repair needs.</p>
+          <a href="#">Read More</a>
+        </article>
       </div>
     </div>
   </section>
@@ -49,7 +62,7 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/aos.js"></script>
   <script>
     AOS.init();
   </script>
